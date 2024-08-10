@@ -151,6 +151,9 @@ checkerboard_initial_values:
   yaw: 0.0
 ```
 
+[This tool](https://markhedleyjones.com/projects/calibration-checkerboard-collection)
+can be helfpul for creating checkerboards.
+
 #### Migrating from ROS1
 
 There are a number of changes in migrating from ROS1 to ROS2. Some of these are
@@ -296,6 +299,3 @@ Node topics:
 The output of the calibration is three parameters, _mag_bias_x_, _mag_bias_y_,
 and _mag_bias_z_, which can be used with the <code>imu_filter_madgwick</code> package.
 
-# Status
-
- * Humble Devel Job Status: [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hdev__robot_calibration__ubuntu_jammy_amd64)](https://build.ros2.org/job/Hdev__robot_calibration__ubuntu_jammy_amd64/)
