@@ -73,8 +73,9 @@ For each calibration step, there are several parameters:
    is the tip of the IK chain. The "models" parameter is a list of model names.
  * free_params - Defines the names of single-value free parameters. These
    can be the names of a joint for which the joint offset should be calculated,
-   camera parameters such as focal lengths, or other parameters, such as
-   driver offsets for Primesense devices.
+   camera parameters such as focal lengths or the driver offsets for
+   Primesense devices. If attempting to calibrate the length of a robot
+   link, use `free_frames` to define the axis that is being calibrated.
  * free_frames - Defines the names of multi-valued free parameters that
    are 6-d transforms. Also defines which axis are free. X, Y, and Z can all
    be independently set to free parameters. Roll, pitch and yaw can also be
@@ -123,6 +124,7 @@ For each error block, the type must be specified. The type should be one of:
    parameter.
 
 #### Checkerboard Configuration
+
 When using a checkerboard, we need to estimate the transformation from the
 the kinematic chain to the checkerboard. Calibration will be faster and more
 accurate if the initial estimate of this transformation is close to the actual
