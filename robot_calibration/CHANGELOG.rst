@@ -2,6 +2,21 @@
 Changelog for package robot_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add qos overrides for finders (`#174 <https://github.com/mikeferguson/robot_calibration/issues/174>`_)
+  this is primarily a workaround for the issues seen
+  in jazzy where large topics do not come through
+  over best effort subscribers.
+* do not run calibration if no feature finders (`#167 <https://github.com/mikeferguson/robot_calibration/issues/167>`_)
+  due to misconfiguration (for instance, camera_info topic
+  is wrong) the finders may not initialize but the robot
+  will move through all the poses, say it captured
+  all of them, and then have no observations in the
+  output bagfile
+* remove redundant keep_last() (`#166 <https://github.com/mikeferguson/robot_calibration/issues/166>`_)
+* Contributors: Michael Ferguson
+
 0.9.0 (2024-04-23)
 ------------------
 * deprecated header has been removed for j-turtle (`#162 <https://github.com/mikeferguson/robot_calibration/issues/162>`_)
