@@ -2,8 +2,8 @@
 Changelog for package robot_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2024-09-26)
+------------------
 * add qos overrides for finders (`#174 <https://github.com/mikeferguson/robot_calibration/issues/174>`_)
   this is primarily a workaround for the issues seen
   in jazzy where large topics do not come through
