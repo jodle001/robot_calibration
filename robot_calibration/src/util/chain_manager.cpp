@@ -61,7 +61,7 @@ ChainManager::ChainManager(rclcpp::Node::SharedPtr node, long int wait_time) :
     if (controller->shouldPlan() && (!move_group_))
     {
       move_group_ = std::make_shared<ActionClient<MoveGroupAction>>();
-      move_group_->init(node, "move_group");
+      move_group_->init(node, "move_action");
       if (!move_group_->waitForServer(wait_time))
       {
         RCLCPP_WARN(LOGGER, "Failed to connect to move_group");
