@@ -27,7 +27,7 @@
 #include <robot_calibration_msgs/msg/calibration_data.hpp>
 
 #include <opencv2/calib3d/calib3d.hpp>
-#include <cv_bridge/cv_bridge.hpp>
+#include <cv_bridge/cv_bridge.h>
 
 namespace robot_calibration
 {

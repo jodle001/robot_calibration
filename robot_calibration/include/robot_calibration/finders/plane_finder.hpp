@@ -23,7 +23,7 @@
 #include <robot_calibration/util/depth_camera_info.hpp>
 #include <robot_calibration/util/eigen_geometry.hpp>
 #include <robot_calibration_msgs/msg/calibration_data.hpp>
-#include <cv_bridge/cv_bridge.hpp>
+#include <cv_bridge/cv_bridge.h>
 
 namespace robot_calibration
 {
