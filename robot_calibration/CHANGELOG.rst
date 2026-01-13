@@ -2,6 +2,35 @@
 Changelog for package robot_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.10.0 (2024-12-12)
+-------------------
+* massive speedup of plane finder (`#191 <https://github.com/mikeferguson/robot_calibration/issues/191>`_)
+  * roughly 30x faster on VGA point cloud filtering
+  * KDL was 3x faster than using Eigen
+* improve base calibration (`#190 <https://github.com/mikeferguson/robot_calibration/issues/190>`_)
+  * add rollout calibration using linear movements
+  * parameterize the calibration_steps
+* improve LED finder (`#189 <https://github.com/mikeferguson/robot_calibration/issues/189>`_)
+  if the single pixel that is most changed has NANs,
+  don't immediately throw out the sample
+* revert dependency on libfcl-dev (`#188 <https://github.com/mikeferguson/robot_calibration/issues/188>`_)
+* Contributors: Michael Ferguson
+
+0.9.3 (2024-12-03)
+------------------
+* temporarily depend on libfcl-dev (`#185 <https://github.com/mikeferguson/robot_calibration/issues/185>`_)
+* Contributors: Michael Ferguson
+
+0.9.2 (2024-11-08)
+------------------
+* include tf2_geometry_msgs earlier to avoid missing symbols (`#182 <https://github.com/mikeferguson/robot_calibration/issues/182>`_)
+* port capture_poses script to ROS 2, document (`#181 <https://github.com/mikeferguson/robot_calibration/issues/181>`_)
+* improve parsing of xyz and rpy fields (`#177 <https://github.com/mikeferguson/robot_calibration/issues/177>`_)
+  * don't segfault if xyz or rpy missing
+  * remove extra spaces in xyz/rpy fields
+* urdf/model.h -> urdf/model.hpp (`#175 <https://github.com/mikeferguson/robot_calibration/issues/175>`_)
+* Contributors: Michael Ferguson
+
 0.9.1 (2024-09-26)
 ------------------
 * add qos overrides for finders (`#174 <https://github.com/mikeferguson/robot_calibration/issues/174>`_)
