@@ -42,6 +42,9 @@ find_package(tf2_ros REQUIRED)
 find_package(urdf REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(yaml-cpp REQUIRED)
+# tinyxml has no CMake config; offsets.cpp uses it directly and nothing in
+# the Jazzy dependency closure links it transitively anymore.
+find_library(tinyxml_LIBRARIES NAMES tinyxml REQUIRED)
 
 include_directories(include
                     ${Boost_INCLUDE_DIRS}

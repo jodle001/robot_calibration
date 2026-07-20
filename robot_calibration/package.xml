@@ -40,6 +40,7 @@
   <depend>libgflags-dev</depend>
   <depend>suitesparse</depend>
   <depend>protobuf-dev</depend>
+  <depend>tinyxml</depend>
   <depend>yaml-cpp</depend>
 
   <!-- Temporary hack for issue with geometric_shapes -->
